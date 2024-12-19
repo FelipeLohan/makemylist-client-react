@@ -1,21 +1,28 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import App from './App.jsx'
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import App from "./App.jsx";
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
-  
-@import url('https://fonts.googleapis.com/css2?family=Jersey+10&family=Jersey+15&display=swap');
 
 * {
   scroll-behavior: smooth;
+  
 }
 
 body {
+  -webkit-font-smoothing: antialiased; 
+  -moz-osx-font-smoothing: grayscale; 
+  text-rendering: optimizeLegibility; 
   height: 100%;
   margin: 0;
-  font-family: "Jersey 10", serif;
-  font-weight: 400;
+  font-family: "Handjet", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings:
+    "ELGR" 1,
+    "ELSH" 2;
   background-color: #fff;
   box-sizing: border-box;
 }
@@ -41,11 +48,11 @@ img {
 a {
   text-decoration: none;
 }
-`
+`;
 
-createRoot(document.getElementById('root')).render(
+createRoot(document.getElementById("root")).render(
   <StrictMode>
     <GlobalStyle />
     <App />
   </StrictMode>
-)
+);
