@@ -7,6 +7,7 @@ const HeaderContainer = styled.header`
   background-color: #213557;
   padding: 10px;
   width: 100%;
+  margin-bottom: 40px;
 
   img{
     width: 20%

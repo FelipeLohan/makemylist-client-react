@@ -4,7 +4,8 @@ import App from './App.jsx'
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
-  @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+  
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&family=Jersey+15&display=swap');
 
 * {
   scroll-behavior: smooth;
@@ -13,8 +14,8 @@ const GlobalStyle = createGlobalStyle`
 body {
   height: 100%;
   margin: 0;
-  font-family: "Lato", sans-serif;
-  font-weight: 700;
+  font-family: "Jersey 10", serif;
+  font-weight: 400;
   background-color: #fff;
   box-sizing: border-box;
 }
@@ -46,5 +47,5 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
     <GlobalStyle />
     <App />
-  </StrictMode>,
+  </StrictMode>
 )
