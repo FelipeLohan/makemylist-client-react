@@ -16,14 +16,10 @@ body {
   text-rendering: optimizeLegibility; 
   height: 100%;
   margin: 0;
-  font-family: "Handjet", serif;
+  font-family: "Nunito", serif;
   font-optical-sizing: auto;
-  font-weight: 300;
   font-style: normal;
-  font-variation-settings:
-    "ELGR" 1,
-    "ELSH" 2;
-
+  
   background-color: #E8EFFF;
   box-sizing: border-box;
 }

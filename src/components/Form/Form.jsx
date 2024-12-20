@@ -5,7 +5,7 @@ import { CtaButton } from "../CtaButton";
 
 const FormContainer = styled.section`
   background-color: #FFF;
-  width: 80%;
+  width: 50%;
   margin: 0 auto;
   padding: 40px;
   border-radius: 8px;

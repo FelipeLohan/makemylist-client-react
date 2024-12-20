@@ -8,9 +8,9 @@ const DropdownListContainer = styled.div`
   margin-bottom: 20px;
 
   label {
-    font-size: 3vmin;
+    font-size: 2.5vmin;
     margin-bottom: 5px;
-    font-weight: 400;
+    color: #213557;
   }
 
   select {
@@ -28,8 +28,8 @@ const DropdownList = (props) => {
         <label>{props.labelText}</label>
         <select required={props.valueRequired}>
           <option></option>
-          {props.item.map(e => {
-            return <option key={e}>{e}</option>
+          {props.item.map((e) => {
+            return <option key={e}>{e}</option>;
           })}
         </select>
       </DropdownListContainer>

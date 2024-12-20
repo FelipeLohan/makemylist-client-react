@@ -9,9 +9,8 @@ const TextInputContainer = styled.div`
   color: #213557;
 
   label {
-    font-size: 3vmin;
+    font-size: 2.5vmin;
     margin-bottom: 5px;
-    font-weight: 400;
   }
 
   input {
