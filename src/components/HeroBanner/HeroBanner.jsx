@@ -10,7 +10,7 @@ const HeroBannerContainer = styled.section`
 
   h2{
     color: #fff;
-    font-size: 4.5vmin;
+    font-size: 5vmin;
   }
 `
 

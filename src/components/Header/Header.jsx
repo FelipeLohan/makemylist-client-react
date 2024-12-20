@@ -5,8 +5,9 @@ const HeaderContainer = styled.header`
   display: flex;
   justify-content: center;
   background-color: #213557;
-  padding: 10px;
+  padding: 10px 0px;
   width: 100%;
+  max-width: 100%;
   margin-bottom: 40px;
 
   img{

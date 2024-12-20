@@ -1,3 +1,4 @@
+import { Form } from "./components/Form"
 import { Header } from "./components/Header"
 import { HeroBanner } from "./components/HeroBanner"
 
@@ -8,6 +9,7 @@ function App() {
       <div>
         <Header />
         <HeroBanner />
+        <Form />
       </div>
     </>
   )

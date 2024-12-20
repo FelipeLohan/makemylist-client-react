@@ -23,7 +23,8 @@ body {
   font-variation-settings:
     "ELGR" 1,
     "ELSH" 2;
-  background-color: #fff;
+
+  background-color: #E8EFFF;
   box-sizing: border-box;
 }
 
