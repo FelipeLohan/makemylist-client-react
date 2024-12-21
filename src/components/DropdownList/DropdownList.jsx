@@ -22,11 +22,16 @@ const DropdownListContainer = styled.div`
 `;
 
 const DropdownList = (props) => {
+
+  const handleOnChange = (e) => {
+    props.handleState(e.target.value)
+  }
+
   return (
     <>
       <DropdownListContainer>
         <label>{props.labelText}</label>
-        <select required={props.valueRequired}>
+        <select value={props.value} onChange={handleOnChange} required={props.valueRequired}>
           <option></option>
           {props.item.map((e) => {
             return <option key={e}>{e}</option>;
@@ -41,6 +46,8 @@ DropdownList.propTypes = {
   item: PropTypes.string.isRequired,
   valueRequired: PropTypes.string.isRequired,
   labelText: PropTypes.string.isRequired,
+  handleState: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
 };
 
 export { DropdownList };
