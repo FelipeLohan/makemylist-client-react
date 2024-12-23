@@ -7,6 +7,7 @@ const GlobalStyle = createGlobalStyle`
 
 * {
   scroll-behavior: smooth;
+  box-sizing: border-box;
   
 }
 
@@ -23,7 +24,7 @@ body {
   background-color: #E8EFFF;
   box-sizing: border-box;
 }
-
+  
 h1,
 h2,
 h3,
