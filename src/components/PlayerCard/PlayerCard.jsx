@@ -1,8 +1,7 @@
 import styled from "styled-components";
-
+import PropTypes from "prop-types";
 
 const PlayerCard = (props) => {
-  
   const PlayerCardContainer = styled.div`
     display flex;
     background-color: #fff;
@@ -18,20 +17,25 @@ const PlayerCard = (props) => {
       gap: 10px;
       
     }
-  `
+  `;
 
   return (
     <>
-    <PlayerCardContainer>
-      <div>
-        <img />
-        <p>Anakcry</p>
-        <span>‎ </span>
-        <p>Ingame-lider</p>
-      </div>
-    </PlayerCardContainer>
+      <PlayerCardContainer>
+        <div>
+          <img />
+          <p>Anakcry</p>
+          <span>‎ </span>
+          <p>Ingame-lider</p>
+        </div>
+      </PlayerCardContainer>
     </>
-  )
+  );
+};
+
+PlayerCard.propTypes = {
+  teamMembers: PropTypes.string.isRequired,
 }
 
-export { PlayerCard }
+
+export { PlayerCard };

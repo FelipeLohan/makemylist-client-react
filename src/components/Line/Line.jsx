@@ -36,7 +36,7 @@ const Line = (props) => {
           <h3>{props.name}</h3>
         </TitleLineContainer>
         <CardContainer>
-          <PlayerCard />
+          <PlayerCard teamMembers={props.teamMembers}/>
         </CardContainer>
 
       </LineContainer>
@@ -47,6 +47,8 @@ const Line = (props) => {
 Line.propTypes = {
   primaryColor: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
+  secondaryColor: PropTypes.string.isRequired,
+  teamMembers: PropTypes.string.isRequired,
 }
 
 export { Line };

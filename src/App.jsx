@@ -36,7 +36,13 @@ function App() {
         <HeroBanner />
         <Form memberValue={handleTeamMembers} />
         {Lines.map(e => {
-          return <Line key={e.name} name={e.name} primaryColor={e.primaryColor} secondaryColor={e.secondaryColor} />
+          return <Line 
+          key={e.name} 
+          name={e.name} 
+          primaryColor={e.primaryColor} 
+          secondaryColor={e.secondaryColor}
+          teamMembers={teamMember} 
+          />
         })}
       </div>
     </>
