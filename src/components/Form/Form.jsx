@@ -19,6 +19,15 @@ const FormContainer = styled.section`
     margin-bottom: 40px;
     color: #213557;
   }
+
+  @media (max-width: 768px) {
+    width: 90%;
+    padding: 10px;
+
+    h2{
+      font-size: 5vmin;
+    }
+  }
 `;
 
 const Form = (props) => {

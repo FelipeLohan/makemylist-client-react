@@ -12,16 +12,25 @@ const HeroBannerContainer = styled.section`
     color: #fff;
     font-size: 5vmin;
   }
-`
+
+  @media (max-width: 768px) {
+    width: 90%;
+    padding: 60px 20px;
+    
+    h2{
+    font-size: 6vmin;
+    }
+}
+`;
 
 const HeroBanner = () => {
-  return(
+  return (
     <>
-    <HeroBannerContainer>
-      <h2>Monte a line do seu time, e compartilhe com todos.</h2>
-    </HeroBannerContainer>
+      <HeroBannerContainer>
+        <h2>Monte a line do seu time, e compartilhe com todos.</h2>
+      </HeroBannerContainer>
     </>
-  )
-}
+  );
+};
 
-export { HeroBanner }
+export { HeroBanner };

@@ -10,21 +10,25 @@ const HeaderContainer = styled.header`
   max-width: 100%;
   margin-bottom: 40px;
 
-  img{
-    width: 20%
+  img {
+    width: 20%;
   }
 
-`
+  @media (max-width: 768px) {
+    img {
+      width: 35%;
+    }
+  }
+`;
 
 const Header = () => {
-  return(
+  return (
     <>
       <HeaderContainer>
         <img src={Logo} />
       </HeaderContainer>
     </>
-  )
+  );
+};
 
-}
-
-export { Header }
+export { Header };

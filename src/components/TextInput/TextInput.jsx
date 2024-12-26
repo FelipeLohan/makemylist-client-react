@@ -9,12 +9,12 @@ const TextInputContainer = styled.div`
   color: #213557;
 
   label {
-    font-size: 2.5vmin;
+    font-size: 3vmin;
     margin-bottom: 5px;
   }
 
   input {
-    font-size: 2vmin;
+    font-size: 2.5vmin;
     padding: 10px;
     border: 0.3px solid #c2c2c2;
     border-radius: 6px;
