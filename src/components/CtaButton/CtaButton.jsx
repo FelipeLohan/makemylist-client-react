@@ -11,7 +11,8 @@ const CtaButtonContainer = styled.div`
     padding: 10px 20px;
     border: none;
     border-radius: 12px;
-    font-size: 2.5vmin
+    font-size: 2.5vmin;
+    cursor: pointer;
   }
 `;
 
