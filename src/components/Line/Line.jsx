@@ -20,14 +20,18 @@ const Line = (props) => {
 
     & h3 {
       color: #fff;
+      font-size: 6vmin;
+      font-weight: 800;
     }
   `;
 
   const CardContainer = styled.div`
+    display: flex;
+    justify-content: space-around;
     padding: 16px;
     background: ${props.secondaryColor};
     width: 100%;
-  `
+  `;
 
   return (
     <>
@@ -36,9 +40,20 @@ const Line = (props) => {
           <h3>{props.name}</h3>
         </TitleLineContainer>
         <CardContainer>
-          <PlayerCard teamMembers={props.teamMembers}/>
+          {props.teamMembers.map((e) => {
+            return (
+              <PlayerCard
+                key={e.nickValue}
+                nick={e.nickValue}
+                image={e.imagemValue}
+                function={e.funcaoValue}
+                line={e.lineValue}
+                primaryColor={props.primaryColor}
+                secondaryColor={props.secondaryColor}
+              />
+            );
+          })}
         </CardContainer>
-
       </LineContainer>
     </>
   );
@@ -49,6 +64,6 @@ Line.propTypes = {
   name: PropTypes.string.isRequired,
   secondaryColor: PropTypes.string.isRequired,
   teamMembers: PropTypes.string.isRequired,
-}
+};
 
 export { Line };

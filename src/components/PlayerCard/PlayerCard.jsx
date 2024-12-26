@@ -8,14 +8,29 @@ const PlayerCard = (props) => {
     border-radius: 12px;
     padding: 32px;
     width: fit-content;
-    border: 3px solid #AE4746;
+    border: 4px solid ${props.primaryColor};
 
     & div {
       display: flex;
       align-items: center;
       flex-direction: column;
       gap: 10px;
-      
+    }
+
+    & img{
+      width: 70%;
+    }
+
+    & h3, h4{
+        color: ${props.primaryColor};
+    }
+
+    & h3{
+    font-size: 4vmin
+    }
+
+    & h4{
+    font-size: 2.5vmin;
     }
   `;
 
@@ -23,10 +38,9 @@ const PlayerCard = (props) => {
     <>
       <PlayerCardContainer>
         <div>
-          <img />
-          <p>Anakcry</p>
-          <span>‎ </span>
-          <p>Ingame-lider</p>
+          <img src={props.image} />
+          <h3>{props.nick}</h3>
+          <h4>{props.function}</h4>
         </div>
       </PlayerCardContainer>
     </>
@@ -35,7 +49,11 @@ const PlayerCard = (props) => {
 
 PlayerCard.propTypes = {
   teamMembers: PropTypes.string.isRequired,
-}
-
+  image: PropTypes.string.isRequired,
+  nick: PropTypes.string.isRequired,
+  function: PropTypes.string.isRequired,
+  primaryColor: PropTypes.string.isRequired,
+  secondaryColor: PropTypes.string.isRequired,
+};
 
 export { PlayerCard };

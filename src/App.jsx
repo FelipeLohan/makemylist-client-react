@@ -9,21 +9,22 @@ function App() {
 
   const handleTeamMembers = (newMember) => {
     setTeamMember([...teamMember, newMember]);
+    console.log(teamMember)
   };
 
   const Lines = [
     {
-      name: "Line UP",
+      name: "LINE UP",
       primaryColor: "#E06B69",
       secondaryColor: "linear-gradient(to bottom, #E06B69 0%, #FF9E9C 100%);",
     },
     {
-      name: "Line A",
+      name: "LINE A",
       primaryColor: "#57C278",
       secondaryColor: "linear-gradient(to bottom, #57C278 0%, #9CF3B7 100%);",
     },
     {
-      name: "Line B",
+      name: "LINE B",
       primaryColor: "#82CFFA",
       secondaryColor: "linear-gradient(to bottom, #82CFFA 0%, #A3DEFF 100%);",
     }
@@ -41,7 +42,7 @@ function App() {
           name={e.name} 
           primaryColor={e.primaryColor} 
           secondaryColor={e.secondaryColor}
-          teamMembers={teamMember} 
+          teamMembers={teamMember.filter((member) => member.lineValue === e.name)} 
           />
         })}
       </div>

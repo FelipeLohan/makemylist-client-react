@@ -27,7 +27,9 @@ body {
 h1,
 h2,
 h3,
-p {
+h4,
+p,
+span {
   margin: 0px;
 }
 
