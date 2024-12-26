@@ -8,6 +8,7 @@ const FooterContainer = styled.footer`
   justify-content: space-between;
   padding: 20px;
   background-color: #213557;
+  margin-top: 40px;
 `;
 
 const LogoFooterContainer = styled.div`

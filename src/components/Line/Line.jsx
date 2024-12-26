@@ -7,7 +7,6 @@ const LineContainer = styled.section`
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 40px;
 `;
 
 const Line = (props) => {
