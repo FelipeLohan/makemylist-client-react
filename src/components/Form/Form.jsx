@@ -13,6 +13,7 @@ const FormContainer = styled.section`
   padding: 40px;
   border-radius: 8px;
   margin-top: 40px;
+  margin-bottom: 40px;
 
   h2 {
     font-size: 4vmin;
