@@ -35,8 +35,12 @@ const Form = (props) => {
       nickValue,
       imagemValue,
       funcaoValue,
-      lineValue
-    })
+      lineValue,
+    });
+    setNickValue("");
+    setImagemValue("");
+    setFuncaoValue("");
+    setLineValue("");
   };
 
   return (
@@ -52,19 +56,25 @@ const Form = (props) => {
             placeholderText="Digite o nickname"
           />
           <TextInput
-           handleState={(e) => setImagemValue(e)}
-           value={imagemValue}
+            handleState={(e) => setImagemValue(e)}
+            value={imagemValue}
             labelText="IMAGEM"
             placeholderText="Digite o caminho da imagem"
           />
           <TextInput
-           handleState={(e) => setFuncaoValue(e)}
-           value={funcaoValue}
+            handleState={(e) => setFuncaoValue(e)}
+            value={funcaoValue}
             valueRequired={true}
             labelText="FUNÇÃO"
             placeholderText="Digite a função do player no time"
           />
-          <DropdownList labelText="LINE" valueRequired={true} item={itens} handleState={(e) => setLineValue(e)} value={lineValue} />
+          <DropdownList
+            labelText="LINE"
+            valueRequired={true}
+            item={itens}
+            handleState={(e) => setLineValue(e)}
+            value={lineValue}
+          />
           <CtaButton>Criar Card</CtaButton>
         </form>
       </FormContainer>
@@ -72,9 +82,8 @@ const Form = (props) => {
   );
 };
 
-
 Form.propTypes = {
   memberValue: PropTypes.func.isRequired,
-}
+};
 
 export { Form };

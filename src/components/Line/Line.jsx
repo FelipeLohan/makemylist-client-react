@@ -34,15 +34,14 @@ const Line = (props) => {
   `;
 
   return (
-    <>
-      <LineContainer>
+    (props.teamMembers.length > 0) && <LineContainer>
         <TitleLineContainer>
           <h3>{props.name}</h3>
         </TitleLineContainer>
         <CardContainer>
           {props.teamMembers.map((e) => {
             return (
-              <PlayerCard
+             <PlayerCard
                 key={e.nickValue}
                 nick={e.nickValue}
                 image={e.imagemValue}
@@ -55,7 +54,6 @@ const Line = (props) => {
           })}
         </CardContainer>
       </LineContainer>
-    </>
   );
 };
 

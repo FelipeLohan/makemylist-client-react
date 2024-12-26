@@ -3,13 +3,13 @@ import { Form } from "./components/Form";
 import { Header } from "./components/Header";
 import { HeroBanner } from "./components/HeroBanner";
 import { Line } from "./components/Line";
+import { Footer } from "./components/Footer";
 
 function App() {
   const [teamMember, setTeamMember] = useState([]);
 
   const handleTeamMembers = (newMember) => {
     setTeamMember([...teamMember, newMember]);
-    console.log(teamMember)
   };
 
   const Lines = [
@@ -27,7 +27,7 @@ function App() {
       name: "LINE B",
       primaryColor: "#82CFFA",
       secondaryColor: "linear-gradient(to bottom, #82CFFA 0%, #A3DEFF 100%);",
-    }
+    },
   ];
 
   return (
@@ -36,15 +36,20 @@ function App() {
         <Header />
         <HeroBanner />
         <Form memberValue={handleTeamMembers} />
-        {Lines.map(e => {
-          return <Line 
-          key={e.name} 
-          name={e.name} 
-          primaryColor={e.primaryColor} 
-          secondaryColor={e.secondaryColor}
-          teamMembers={teamMember.filter((member) => member.lineValue === e.name)} 
-          />
+        {Lines.map((e) => {
+          return (
+            <Line
+              key={e.name}
+              name={e.name}
+              primaryColor={e.primaryColor}
+              secondaryColor={e.secondaryColor}
+              teamMembers={teamMember.filter(
+                (member) => member.lineValue === e.name
+              )}
+            />
+          );
         })}
+        <Footer />
       </div>
     </>
   );
